@@ -60,6 +60,5 @@ namespace AcunMedyaCarBook.Domain.Entities
         public List<CarDescription> CarDescriptions { get; set; }
 
 
-
     }
 }
