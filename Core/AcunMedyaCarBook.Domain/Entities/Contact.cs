@@ -15,9 +15,7 @@ namespace AcunMedyaCarBook.Domain.Entities
         /// </summary>
         public string Name { get; set; }
         
-        /// <summary>
-        /// İletişim formunda kullanıcının e-posta adresi
-        /// </summary>
+        
         public string Email { get; set; }
 
         /// <summary>
