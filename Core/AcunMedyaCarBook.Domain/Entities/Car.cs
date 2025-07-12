@@ -59,6 +59,11 @@ namespace AcunMedyaCarBook.Domain.Entities
         /// </summary>
         public List<CarDescription> CarDescriptions { get; set; }
 
+        /// <summary>
+        /// Car <-> Pricing ilişkisini temsil eder.
+        /// CarPricing ise ara tabosudur ve Car ile Pricing arasındaki ilişkiyi yönetir.
+        /// </summary>
+        public List<CarPricing> CarPricings { get; set; }
 
     }
 }
