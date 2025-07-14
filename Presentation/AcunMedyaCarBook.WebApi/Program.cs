@@ -1,6 +1,7 @@
 using AcunMedyaCarBook.Application.Features.CQRS.Handlers.AboutHandler;
 using AcunMedyaCarBook.Application.Features.CQRS.Handlers.BannerHandlers;
 using AcunMedyaCarBook.Application.Features.CQRS.Handlers.BrandHandlers;
+using AcunMedyaCarBook.Application.Features.CQRS.Handlers.CarHandlers;
 using AcunMedyaCarBook.Application.Interfaces;
 using AcunMedyaCarBook.Persistence.Context;
 using AcunMedyaCarBook.Persistence.Repositories;
@@ -30,6 +31,13 @@ builder.Services.AddScoped<GetBrandByIdQueryHandler>();
 builder.Services.AddScoped<CreateBrandCommandHandler>();
 builder.Services.AddScoped<RemoveBrandCommandHandler>();
 builder.Services.AddScoped<UpdateBrandCommandHandler>();
+
+builder.Services.AddScoped<GetCarQueryHandler>();
+builder.Services.AddScoped<GetCarByIdQueryHandler>();
+builder.Services.AddScoped<CreateCarCommandHandler>();
+builder.Services.AddScoped<RemoveCarCommandHandler>();
+builder.Services.AddScoped<UpdateCarCommandHandler>();
+
 
 
 builder.Services.AddControllers();
