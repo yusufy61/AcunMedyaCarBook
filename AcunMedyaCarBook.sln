@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcunMedyaCarBook.WebApi", "Presentation\AcunMedyaCarBook.WebApi\AcunMedyaCarBook.WebApi.csproj", "{985FEE7D-8EB1-49F4-A106-B0DECF643267}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcunMedyaCarBook.Application", "Core\AcunMedyaCarBook.Application\AcunMedyaCarBook.Application.csproj", "{5430372C-4C6E-4641-9EFF-A2EDEC7ED398}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{985FEE7D-8EB1-49F4-A106-B0DECF643267}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{985FEE7D-8EB1-49F4-A106-B0DECF643267}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{985FEE7D-8EB1-49F4-A106-B0DECF643267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5430372C-4C6E-4641-9EFF-A2EDEC7ED398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5430372C-4C6E-4641-9EFF-A2EDEC7ED398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5430372C-4C6E-4641-9EFF-A2EDEC7ED398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5430372C-4C6E-4641-9EFF-A2EDEC7ED398}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{1AF9E126-BC4F-4A21-8309-B4C5B96388AB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{5B23B83A-9421-4250-931A-E273FC3372B2} = {DEEE4F85-EF9D-416A-A9AF-1BB9F71BBE71}
 		{985FEE7D-8EB1-49F4-A106-B0DECF643267} = {3C5D1AF8-8AF1-416A-A22A-9A91C7D65E67}
+		{5430372C-4C6E-4641-9EFF-A2EDEC7ED398} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F796875-2509-4062-A111-A99D8D268B16}
