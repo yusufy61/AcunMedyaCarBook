@@ -2,15 +2,21 @@ using AcunMedyaCarBook.Application.Features.CQRS.Handlers.AboutHandler;
 using AcunMedyaCarBook.Application.Features.CQRS.Handlers.BannerHandlers;
 using AcunMedyaCarBook.Application.Features.CQRS.Handlers.BrandHandlers;
 using AcunMedyaCarBook.Application.Features.CQRS.Handlers.CarHandlers;
+using AcunMedyaCarBook.Application.Features.CQRS.Handlers.CategoryHandlers;
+using AcunMedyaCarBook.Application.Features.CQRS.Handlers.ContactHandlers;
 using AcunMedyaCarBook.Application.Interfaces;
+using AcunMedyaCarBook.Application.Interfaces.CarInterfaces;
 using AcunMedyaCarBook.Persistence.Context;
 using AcunMedyaCarBook.Persistence.Repositories;
+using AcunMedyaCarBook.Persistence.Repositories.CarRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<CarBookContext>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped(typeof(ICarRepository), typeof(CarRepository));
+
 
 builder.Services.AddScoped<GetAboutQueryHandler>();
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();
@@ -37,7 +43,21 @@ builder.Services.AddScoped<GetCarByIdQueryHandler>();
 builder.Services.AddScoped<CreateCarCommandHandler>();
 builder.Services.AddScoped<RemoveCarCommandHandler>();
 builder.Services.AddScoped<UpdateCarCommandHandler>();
+builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
 
+
+builder.Services.AddScoped<GetCategoryQueryHandler>();
+builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
+builder.Services.AddScoped<CreateCategoryCommandHandler>();
+builder.Services.AddScoped<RemoveCategoryCommandHandler>();
+builder.Services.AddScoped<UpdateCategoryCommandHandler>();
+
+
+builder.Services.AddScoped<GetContactQueryHandler>();
+builder.Services.AddScoped<GetContactByIdQueryHandler>();
+builder.Services.AddScoped<CreateContactCommandHandler>();
+builder.Services.AddScoped<RemoveContactCommandHandler>();
+builder.Services.AddScoped<UpdateContactCommandHandler>();
 
 
 builder.Services.AddControllers();

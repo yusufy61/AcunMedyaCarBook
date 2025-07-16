@@ -15,18 +15,20 @@ namespace AcunMedyaCarBook.WebApi.Controllers
         private readonly CreateCarCommandHandler _createCarCommandHandler;
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly UpdateCarCommandHandler _updateCarCommandHandler;
-
+        private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
         public CarsController(GetCarQueryHandler getCarQueryHandler,
             GetCarByIdQueryHandler getCarByIdQueryHandler,
             CreateCarCommandHandler createCarCommandHandler,
             RemoveCarCommandHandler removeCarCommandHandler,
-            UpdateCarCommandHandler updateCarCommandHandler)
+            UpdateCarCommandHandler updateCarCommandHandler,
+            GetCarWithBrandQueryHandler getCarWithBrandQueryHandler)
         {
             _getCarQueryHandler = getCarQueryHandler;
             _getCarByIdQueryHandler = getCarByIdQueryHandler;
             _createCarCommandHandler = createCarCommandHandler;
             _removeCarCommandHandler = removeCarCommandHandler;
             _updateCarCommandHandler = updateCarCommandHandler;
+            _getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
         }
 
         [HttpGet]
@@ -62,6 +64,13 @@ namespace AcunMedyaCarBook.WebApi.Controllers
         {
             await _updateCarCommandHandler.Handle(command);
             return Ok("Araba Bilgisi Güncellendi.");
+        }
+
+        [HttpGet("GetCarWithBrand")]
+        public async Task<IActionResult> GetCarWithBrand()
+        {
+            var values = await _getCarWithBrandQueryHandler.Handle();
+            return Ok(values);
         }
     }
 }
