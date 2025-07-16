@@ -6,6 +6,7 @@ using AcunMedyaCarBook.Application.Features.CQRS.Handlers.CategoryHandlers;
 using AcunMedyaCarBook.Application.Features.CQRS.Handlers.ContactHandlers;
 using AcunMedyaCarBook.Application.Interfaces;
 using AcunMedyaCarBook.Application.Interfaces.CarInterfaces;
+using AcunMedyaCarBook.Application.Services;
 using AcunMedyaCarBook.Persistence.Context;
 using AcunMedyaCarBook.Persistence.Repositories;
 using AcunMedyaCarBook.Persistence.Repositories.CarRepositories;
@@ -59,6 +60,8 @@ builder.Services.AddScoped<CreateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
 builder.Services.AddScoped<UpdateContactCommandHandler>();
 
+// application service ekleme
+builder.Services.AddApplicationService(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
