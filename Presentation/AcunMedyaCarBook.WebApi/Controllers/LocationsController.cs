@@ -35,21 +35,21 @@ namespace AcunMedyaCarBook.WebApi.Controllers
         public async Task<IActionResult> CreateLocation(CreateLocationCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Özellik Başarıyla eklendi.");
+            return Ok("Bölge Başarıyla eklendi.");
         }
 
         [HttpDelete]
         public async Task<IActionResult> RemoveLocation(int id)
         {
             await _mediator.Send(new RemoveLocationCommand(id));
-            return Ok("Özellik Başarıyla Silindi.");
+            return Ok("Bölge Başarıyla Silindi.");
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateLocation(UpdateLocationCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Özellik Başarıyla Güncellendi.");
+            return Ok("Bölge Başarıyla Güncellendi.");
         }
     }
 }
