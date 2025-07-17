@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AcunMedyaCarBook.Dto.TestimonialDTOs;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace AcunMedyaCarBook.WebUI.ViewComponents.TestimonialViewComponents
@@ -21,7 +22,7 @@ namespace AcunMedyaCarBook.WebUI.ViewComponents.TestimonialViewComponents
                 return View("Error");
             }
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<List<>>(jsonData);
+            var values = JsonConvert.DeserializeObject<List<ResultTestimonialDto>>(jsonData);
             return View(values);
         }
     }
